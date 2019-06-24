@@ -30,6 +30,8 @@ public class ExceptionUtil {
         } else if (e instanceof AppException) {
             CodeMsgEnum codeMsgEnum = ((AppException) e).getCodeMsgEnum();
             //自定义提示
+
+
             String data = ((AppException) e).getData();
             if (StringUtils.hasText(data)) {
                 codeMsgEnum.setMsg(data);
